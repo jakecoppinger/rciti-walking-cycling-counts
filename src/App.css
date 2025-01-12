@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  touch-action: pan-y, pan-x;
+}
+
+h3,
+h2,
+h1,
+p {
+  font-family: Helvetica Neue, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+}
+
+.mapClass {
+  border: 1px red;
+}
+
+
+.mapboxgl-popup-content.mapboxgl-popup-content {
+  width: 90vw;
+  max-width: 400px;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 15px;
+}
+
+.mapboxgl-popup-content.mapboxgl-popup-content {
+  max-width: 300px;
+}
+
+.mapboxgl-popup {
+  /* Show popup over the top left info. */
+  z-index: 2;
+}
+
+figcaption {
+  margin-left: 30px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  padding-left: 4px;
+  border-left: 1px solid rgb(192, 192, 192);
+}
+tr {
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+td:first-child,
+th:first-child {
+  border-left: none;
+  width: 110px;
+}
+tr:last-child {
+  border-bottom: none;
+}
+table {
+  margin-bottom: 0px;
+}
