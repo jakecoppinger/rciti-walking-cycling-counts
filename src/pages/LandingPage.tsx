@@ -64,20 +64,22 @@ export function LandingPage() {
         <meta name="description" content="An analysis of rCITI Walking and Cycling Counts" />
       </Helmet>
 
-      <p>Data released under UNSW Research Centre of Integrated Transport Innovation under CC BY-SA 4.0.</p>
+      <p>Data released by the UNSW Research Centre of Integrated Transport Innovation under CC BY-SA 4.0.
+      Contact <a href="mailto:meead.saberi@unsw.edu.au">Meead Saberi</a> for further information.
+      </p>
 
       <p>This analysis site is open source under AGPL-3.0. Initially built by Jake Coppinger
-        in a volunteer capacity. <a href="">Contributions on Github are very welcome!</a>
+        in a volunteer capacity. <a href="https://github.com/jakecoppinger/rciti-walking-cycling-counts/">Contributions on Github are very welcome!</a>
       </p>
       <p>Download the raw CSV data here:</p>
       <p>
-      <ul>
-        <li><a href="./data/traffic-15min.csv">traffic-15min.csv</a></li>
-        <li><a href="./data/traffic-daily.csv">traffic-daily.csv</a></li>
-        <li><a href="./data/traffic-hourly.csv">traffic-hourly.csv</a></li>
-      </ul>
+        <ul>
+          <li><a href="./data/traffic-15min.csv">traffic-15min.csv</a></li>
+          <li><a href="./data/traffic-daily.csv">traffic-daily.csv</a></li>
+          <li><a href="./data/traffic-hourly.csv">traffic-hourly.csv</a></li>
+        </ul>
       </p>
-      
+
       <h2>Location map</h2>
       <ReactMapGL
         initialViewState={{
