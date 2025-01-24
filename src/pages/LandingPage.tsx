@@ -59,7 +59,7 @@ export function LandingPage() {
   return (
     <HeaderAndFooter>
       <Helmet prioritizeSeoTags>
-        <title>Analysis - rCITI Walking and Cycling Counts</title>
+        <title>rCITI Walking and Cycling Counts</title>
         <meta property="og:title" content="rCITI Walking and Cycling Counts" />
         <meta name="description" content="An analysis of rCITI Walking and Cycling Counts" />
       </Helmet>
