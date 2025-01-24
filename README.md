@@ -27,16 +27,46 @@ npm run start
 - Head to https://www.eco-visio.net/v5/login and login
 - Select `Analysis` tab on sidebar
 - Select `Previous version` of Analysis page at the top
-- Select `Time series`
-- Select `Whole Period`
+- Select `Time series` graphic
+- Under `Period` select `Whole Period`
 - Choose 15 min / Hour / Day interval as desired
+- Select `Table` (not `Chart` - you can download from the Chart view but <=1hr frequency fails due
+  to too much data)
 - Select `Apply`
 - Select `Download` to CSV
-- Use comma separated
+- Select comma separated delimeter
 - Download to `public/data/...` and adjust filename
-- Update all three files (15 min , hour, day)
+- Repeat for all three files (15 min, hour, day)
 - Run `generate-data` script as per above
 - Commit the results & updated CSV.
+
+Note: If you're getting lots of `^M` characters in the Git diff, you should convert the newlines
+from Windows to Unix format using your preferred method. Eg. On Debian / Ubuntu:
+
+```
+sudo apt-get install dos2unix
+dos2unix *.csv
+```
+
+- Run `npm run generate-data` to  generate JSON from CSVs
+
+- If you see the error
+
+```bash
+Unhandled Rejection: Error: Heading of row (53 Perouse Rd) not in our 'locations' type (do you need to add it?)
+```
+
+you'll likely need to add the new location strings into `src/types.ts` and find the location
+coordinates too
+
+## How to get coordinates for a new location from Eco Visio
+
+- Head to https://www.eco-visio.net/v5/login and login
+- Select `Sites` in sidebar
+- Choose the new site (that likely caused a type error on JSON generation as mentioned above)
+- Select `Location` in sidebar
+- Add these values into `counterLocationCoordinates` in `src/types.ts`
+
 
 # Further reading / watching on rCITI walking & cycling counts
 
