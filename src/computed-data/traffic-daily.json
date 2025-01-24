@@ -1005,10 +1005,290 @@
   },
   {
     "timestamp": "2024-10-08 00:00:00",
-    "Perouse Rd footpath": 2369,
+    "Perouse Rd footpath": 2385,
     "St Pauls Street footpath": 3368
   },
   {
-    "timestamp": "2024-10-09 00:00:00"
+    "timestamp": "2024-10-09 00:00:00",
+    "Perouse Rd footpath": 1985,
+    "St Pauls Street footpath": 3227
+  },
+  {
+    "timestamp": "2024-10-10 00:00:00",
+    "Perouse Rd footpath": 2354,
+    "St Pauls Street footpath": 3328
+  },
+  {
+    "timestamp": "2024-10-11 00:00:00",
+    "53 Perouse Rd": 1122,
+    "Perouse Rd footpath": 3645,
+    "St Pauls Street footpath": 143
+  },
+  {
+    "timestamp": "2024-10-12 00:00:00",
+    "53 Perouse Rd": 1323,
+    "Perouse Rd footpath": 3807
+  },
+  {
+    "timestamp": "2024-10-13 00:00:00",
+    "53 Perouse Rd": 1109,
+    "Perouse Rd footpath": 3360
+  },
+  {
+    "timestamp": "2024-10-14 00:00:00",
+    "53 Perouse Rd": 940,
+    "Perouse Rd footpath": 2727
+  },
+  {
+    "timestamp": "2024-10-15 00:00:00",
+    "53 Perouse Rd": 1238,
+    "Perouse Rd footpath": 3803
+  },
+  {
+    "timestamp": "2024-10-16 00:00:00",
+    "53 Perouse Rd": 1348,
+    "Perouse Rd footpath": 3596
+  },
+  {
+    "timestamp": "2024-10-17 00:00:00",
+    "53 Perouse Rd": 1838,
+    "Perouse Rd footpath": 2879
+  },
+  {
+    "timestamp": "2024-10-18 00:00:00",
+    "53 Perouse Rd": 1344,
+    "Perouse Rd footpath": 4171
+  },
+  {
+    "timestamp": "2024-10-19 00:00:00",
+    "53 Perouse Rd": 1313
+  },
+  {
+    "timestamp": "2024-10-20 00:00:00",
+    "53 Perouse Rd": 1100
+  },
+  {
+    "timestamp": "2024-10-21 00:00:00",
+    "53 Perouse Rd": 1070
+  },
+  {
+    "timestamp": "2024-10-22 00:00:00",
+    "53 Perouse Rd": 1429
+  },
+  {
+    "timestamp": "2024-10-23 00:00:00",
+    "53 Perouse Rd": 1418
+  },
+  {
+    "timestamp": "2024-10-24 00:00:00",
+    "53 Perouse Rd": 1776
+  },
+  {
+    "timestamp": "2024-10-25 00:00:00",
+    "53 Perouse Rd": 1575
+  },
+  {
+    "timestamp": "2024-10-26 00:00:00",
+    "53 Perouse Rd": 1368
+  },
+  {
+    "timestamp": "2024-10-27 00:00:00",
+    "53 Perouse Rd": 1109
+  },
+  {
+    "timestamp": "2024-10-28 00:00:00",
+    "53 Perouse Rd": 1210
+  },
+  {
+    "timestamp": "2024-10-29 00:00:00",
+    "53 Perouse Rd": 1300
+  },
+  {
+    "timestamp": "2024-10-30 00:00:00",
+    "53 Perouse Rd": 1480
+  },
+  {
+    "timestamp": "2024-10-31 00:00:00",
+    "53 Perouse Rd": 2014
+  },
+  {
+    "timestamp": "2024-11-01 00:00:00",
+    "53 Perouse Rd": 1521
+  },
+  {
+    "timestamp": "2024-11-02 00:00:00",
+    "53 Perouse Rd": 1350
+  },
+  {
+    "timestamp": "2024-11-03 00:00:00",
+    "53 Perouse Rd": 1245
+  },
+  {
+    "timestamp": "2024-11-04 00:00:00",
+    "53 Perouse Rd": 1150
+  },
+  {
+    "timestamp": "2024-11-05 00:00:00",
+    "53 Perouse Rd": 1281
+  },
+  {
+    "timestamp": "2024-11-06 00:00:00",
+    "53 Perouse Rd": 1336
+  },
+  {
+    "timestamp": "2024-11-07 00:00:00",
+    "53 Perouse Rd": 1257
+  },
+  {
+    "timestamp": "2024-11-08 00:00:00",
+    "53 Perouse Rd": 1582
+  },
+  {
+    "timestamp": "2024-11-09 00:00:00",
+    "53 Perouse Rd": 1458
+  },
+  {
+    "timestamp": "2024-11-10 00:00:00",
+    "53 Perouse Rd": 1114
+  },
+  {
+    "timestamp": "2024-11-11 00:00:00",
+    "53 Perouse Rd": 1247
+  },
+  {
+    "timestamp": "2024-11-12 00:00:00",
+    "53 Perouse Rd": 1317
+  },
+  {
+    "timestamp": "2024-11-13 00:00:00",
+    "53 Perouse Rd": 341
+  },
+  {
+    "timestamp": "2024-11-14 00:00:00",
+    "53 Perouse Rd": 0
+  },
+  {
+    "timestamp": "2024-11-15 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-16 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-17 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-18 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-19 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-20 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-21 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-22 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-23 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-24 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-25 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-26 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-27 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-28 00:00:00"
+  },
+  {
+    "timestamp": "2024-11-29 00:00:00",
+    "Lidcombe town centre": 5174
+  },
+  {
+    "timestamp": "2024-11-30 00:00:00",
+    "Lidcombe town centre": 6993
+  },
+  {
+    "timestamp": "2024-12-01 00:00:00",
+    "Lidcombe town centre": 5949
+  },
+  {
+    "timestamp": "2024-12-02 00:00:00",
+    "Lidcombe town centre": 2923
+  },
+  {
+    "timestamp": "2024-12-03 00:00:00",
+    "Lidcombe town centre": 6351
+  },
+  {
+    "timestamp": "2024-12-04 00:00:00",
+    "Lidcombe town centre": 6291
+  },
+  {
+    "timestamp": "2024-12-05 00:00:00",
+    "Lidcombe town centre": 6136
+  },
+  {
+    "timestamp": "2024-12-06 00:00:00",
+    "Lidcombe town centre": 7159
+  },
+  {
+    "timestamp": "2024-12-07 00:00:00",
+    "Lidcombe town centre": 996
+  },
+  {
+    "timestamp": "2024-12-08 00:00:00"
+  },
+  {
+    "timestamp": "2024-12-09 00:00:00"
+  },
+  {
+    "timestamp": "2024-12-10 00:00:00",
+    "Civic Park, Pendle Hill": 99
+  },
+  {
+    "timestamp": "2024-12-11 00:00:00",
+    "Civic Park, Pendle Hill": 316
+  },
+  {
+    "timestamp": "2024-12-12 00:00:00",
+    "Civic Park, Pendle Hill": 215
+  },
+  {
+    "timestamp": "2024-12-13 00:00:00",
+    "Civic Park, Pendle Hill": 262
+  },
+  {
+    "timestamp": "2024-12-14 00:00:00",
+    "Civic Park, Pendle Hill": 235
+  },
+  {
+    "timestamp": "2024-12-15 00:00:00",
+    "Civic Park, Pendle Hill": 284
+  },
+  {
+    "timestamp": "2024-12-16 00:00:00",
+    "Civic Park, Pendle Hill": 251
+  },
+  {
+    "timestamp": "2024-12-17 00:00:00",
+    "Civic Park, Pendle Hill": 189
+  },
+  {
+    "timestamp": "2024-12-18 00:00:00",
+    "Civic Park, Pendle Hill": 239
+  },
+  {
+    "timestamp": "2024-12-19 00:00:00",
+    "Civic Park, Pendle Hill": 377
   }
 ]

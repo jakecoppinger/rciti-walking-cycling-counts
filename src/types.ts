@@ -6,13 +6,13 @@ interface Coord {
  * Coordinates imported from https://www.eco-visio.net/v5//manager/#::view=list&site=300040105
  */
 export const counterLocationCoordinates: Record<LocationKeys, Coord> = {
-  // '53 Perouse Rd': {lat: -33.92063737023946, lon: 151.24289340397812},
+  '53 Perouse Rd': {lat: -33.92063737023946, lon: 151.24289340397812},
   'Addiscombe Rd': {lat: -33.78730580747516, lon: 151.27460385148882},
   'Auburn Rd & Mary St': {lat: -33.85199149135999, lon: 151.03270895720928},
   'Auburn Rd eastern footpath': {lat: -33.85284228197173, lon: 151.03264606150333},
   'Belmore Rd': {lat: -33.914726563403995, lon: 151.24013990163806},
   'Bourke Street & Lachlan Street': {lat: -33.90013, lon: 151.21035},
-  // 'Civic Park, Pendle Hill': {lat: -33.80051267777879, lon: 150.95425664330833},
+  'Civic Park, Pendle Hill': {lat: -33.80051267777879, lon: 150.95425664330833},
   'Coles St': {lat: -33.86500199390324, lon: 151.09832559621285},
   'Collins Street': {lat: -33.91188, lon: 151.19842},
   'Concord Rd East footpath': {lat: -33.857308016489704, lon: 151.09197794120476},
@@ -23,7 +23,7 @@ export const counterLocationCoordinates: Record<LocationKeys, Coord> = {
   'Evaline St South side': {lat: -33.91352625685791, lon: 151.10307706170718},
   'Houston Rd and Day Ave': {lat: -33.91783238582725, lon: 151.22495631454515},
   'Kenneth Rd': {lat: -33.78862294811363, lon: 151.278372569941},
-  // 'Lidcombe town centre': {lat: -33.86437856227838, lon: 151.04377584066245},
+  'Lidcombe town centre': {lat: -33.86437856227838, lon: 151.04377584066245},
   'Oliver St & Brighton St (East)': {lat: -33.770257, lon: 151.285187},
   'Oliver St & Brighton St (West)': {lat: -33.77043, lon: 151.28497},
   'Oliver Street (east footpath)': {lat: -33.77453188716859, lon: 151.28437679959464},
@@ -35,11 +35,13 @@ export const counterLocationCoordinates: Record<LocationKeys, Coord> = {
 };
 
 export const locations = [
+  '53 Perouse Rd',
   'Addiscombe Rd',
   'Auburn Rd & Mary St',
   'Auburn Rd eastern footpath',
   'Belmore Rd',
   'Bourke Street & Lachlan Street',
+  'Civic Park, Pendle Hill',
   'Coles St',
   'Collins Street',
   'Concord Rd East footpath',
@@ -50,6 +52,7 @@ export const locations = [
   'Evaline St South side',
   'Houston Rd and Day Ave',
   'Kenneth Rd',
+  'Lidcombe town centre',
   'Oliver St & Brighton St (East)',
   'Oliver St & Brighton St (West)',
   'Oliver Street (east footpath)',
@@ -58,17 +61,22 @@ export const locations = [
   'Perouse Rd footpath',
   'Rainbow street',
   'St Pauls Street footpath',
+  '53 Perouse Rd',
+  'Civic Park, Pendle Hill'
 ] as const;
 
 /**
- * A unique colour for each location. Can be anything, but MUST be unique.
+ * A unique colour for each location. Can be anything, but should be unique.
+ * TODO: Clean this up - little confidence they're all valid or unique!
  */
   export const locationColours: Record<LocationKeys, string> = {
+    '53 Perouse Rd': 'lightblue',
     'Addiscombe Rd': 'red',
     'Auburn Rd & Mary St': 'blue',
     'Auburn Rd eastern footpath': 'green',
     'Belmore Rd': 'yellow',
     'Bourke Street & Lachlan Street': 'orange',
+    'Civic Park, Pendle Hill': 'lightgreen',
     'Coles St': 'purple',
     'Collins Street': 'teal',
     'Concord Rd East footpath': 'pink',
@@ -79,6 +87,7 @@ export const locations = [
     'Evaline St South side': 'magenta',
     'Houston Rd and Day Ave': 'cyan',
     'Kenneth Rd': 'navy',
+    'Lidcombe town centre': 'ivory',
     'Oliver St & Brighton St (East)': 'maroon',
     'Oliver St & Brighton St (West)': 'olive',
     'Oliver Street (east footpath)': 'turquoise',
@@ -86,11 +95,12 @@ export const locations = [
     'Parramatta Rd footpath': 'lavender',
     'Perouse Rd footpath': 'indigo',
     'Rainbow street': 'peach',
-    'St Pauls Street footpath': 'plum'
+    'St Pauls Street footpath': 'plum',
   };
 
 export type LocationKeys = (typeof locations)[number];
 
+// TODO: Generate this from keys in locations
 export interface TrafficData {
   /** Time like "2024-03-07 00:00:00", (not ISO8601) */
   timestamp: string;
@@ -99,6 +109,7 @@ export interface TrafficData {
   'Auburn Rd eastern footpath': number | undefined,
   'Belmore Rd': number | undefined,
   'Bourke Street & Lachlan Street': number | undefined,
+  'Civic Park, Pendle Hill': number | undefined,
   'Coles St': number | undefined,
   'Collins Street': number | undefined,
   'Concord Rd East footpath': number | undefined,
@@ -109,6 +120,7 @@ export interface TrafficData {
   'Evaline St South side': number | undefined,
   'Houston Rd and Day Ave': number | undefined,
   'Kenneth Rd': number | undefined,
+  'Lidcombe town centre': number | undefined,
   'Oliver St & Brighton St (East)': number | undefined,
   'Oliver St & Brighton St (West)': number | undefined,
   'Oliver Street (east footpath)': number | undefined,
@@ -117,34 +129,12 @@ export interface TrafficData {
   'Perouse Rd footpath': number | undefined,
   'Rainbow street': number | undefined,
   'St Pauls Street footpath': number | undefined;
+  '53 Perouse Rd': number | undefined;
 }
 
-export interface TrafficGraphingData {
+export interface TrafficGraphingData extends Omit<TrafficData, 'timestamp'> {
   /** Time like "2024-03-07 00:00:00", (not ISO8601) */
   timestamp: Date;
-  'Addiscombe Rd': number | undefined,
-  'Auburn Rd & Mary St': number | undefined,
-  'Auburn Rd eastern footpath': number | undefined,
-  'Belmore Rd': number | undefined,
-  'Bourke Street & Lachlan Street': number | undefined,
-  'Coles St': number | undefined,
-  'Collins Street': number | undefined,
-  'Concord Rd East footpath': number | undefined,
-  'Concord Rd West footpath': number | undefined,
-  'Correys Ave': number | undefined,
-  'Doncaster Ave North of Todman Ave': number | undefined,
-  'Evaline St North side': number | undefined,
-  'Evaline St South side': number | undefined,
-  'Houston Rd and Day Ave': number | undefined,
-  'Kenneth Rd': number | undefined,
-  'Oliver St & Brighton St (East)': number | undefined,
-  'Oliver St & Brighton St (West)': number | undefined,
-  'Oliver Street (east footpath)': number | undefined,
-  'Oliver Street (west footpath)': number | undefined,
-  'Parramatta Rd footpath': number | undefined,
-  'Perouse Rd footpath': number | undefined,
-  'Rainbow street': number | undefined,
-  'St Pauls Street footpath': number | undefined;
 }
 
 export interface TrafficDataRaw {
