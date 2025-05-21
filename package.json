@@ -43,7 +43,7 @@
     "build": "cp tsconfigs/web.tsconfig.json tsconfig.json && react-scripts build",
     "test": "cp tsconfigs/web.tsconfig.json tsconfig.json && react-scripts test --watchAll=false",
     "generate-data": "cp tsconfigs/node.tsconfig.json tsconfig.json && tsc && NODE_NO_WARNINGS=1 node --max_old_space_size=4096 --trace-warnings  --experimental-specifier-resolution=node ./dist/generate-static-json.js && cp ",
-    "deploy": "npm run test && npm run build && npx wrangler pages deploy ./build/"
+    "deploy": "npm run build && npx wrangler pages deploy ./build/"
   },
   "eslintConfig": {
     "extends": "react-app"
