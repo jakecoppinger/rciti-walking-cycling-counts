@@ -1,10 +1,9 @@
 import csv from "csv-parser";
 import fs from "fs";
 
-import { Transform } from "stream";
 import { dailyTrafficFilename } from "./config.js";
 import { locations, LocationKeys, isStringALocationKey, TrafficData, TrafficDataRaw } from "./types.js";
-
+import { parseDateString } from "./utils.js";
 
 
 interface TrafficDataFile {
@@ -53,20 +52,20 @@ function cleanAndCheckData(data: TrafficDataRaw[]): TrafficData[] {
       if (key === "") {
         continue;
       }
-      console.log({ key, value });
       if (key === "Time") {
+        // validate the timestamp entry
         if (!value || value === "" || value === undefined) {
           throw new Error(`Missing timestamp in row: ${JSON.stringify(row)}`);
         }
-        cleanedRow.timestamp = value as string;
-        console.log(`setting cleanedRow.timestamp to ${value}`);
+
+        const parsedDate = parseDateString(value);
+        cleanedRow.timestamp = parsedDate.toISOString();
         continue;
       }
       if (!isStringALocationKey(key)) {
         throw new Error(`Heading of row (${key}) not in our 'locations' type (do you need to add it?): ${JSON.stringify(row)}`);
       }
       if (value === "" || value === undefined) {
-        console.log(`setting cleanedRow[${key}] to undefined`);
         // @ts-ignore
         cleanedRow[key] = undefined;
         continue;
@@ -112,10 +111,16 @@ async function main() {
 main();
 
 process.on("uncaughtException", (err) => {
-  console.log(`Uncaught Exception: ${err}, ${JSON.stringify(err)}`);
+  console.error(`Uncaught Exception: ${err}, ${JSON.stringify(err)}`);
   process.exit(1);
 });
 process.on("unhandledRejection", (err) => {
-  console.log(`Unhandled Rejection: ${err}, ${JSON.stringify(err)}`);
-  throw err;
+  console.error(`Unhandled Rejection: ${err}, ${JSON.stringify(err)}`);
+  process.exit(1);
+});
+
+// Add this to ensure we exit on any error
+process.on("error", (err) => {
+  console.error(`Process Error: ${err}, ${JSON.stringify(err)}`);
+  process.exit(1);
 });

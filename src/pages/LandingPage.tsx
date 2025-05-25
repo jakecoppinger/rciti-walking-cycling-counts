@@ -15,7 +15,9 @@ import "../App.css";
 import rawData from '../computed-data/traffic-daily.json';
 import { LocationAverageCountsTable, MultipleLocationsTimelineFigure } from "../components/plotUtils";
 import { MAPBOX_TOKEN } from "../config";
+import { formatDateInSydney } from "../utils";
 const data = rawData as TrafficData[];
+
 const graphingData: TrafficGraphingData[] = data.map((d) => {
   const graphingData: TrafficGraphingData = {
     ...d,
@@ -44,7 +46,7 @@ const TrafficTable = ({
       <tbody>
         {traffic.map((t) => (
           <tr>
-            <td>{t.timestamp}</td>
+            <td>{formatDateInSydney({date: new Date(t.timestamp), showTime: false})}</td>
             {headers.toSorted().map((header) => (
               <td key={header}>{t[header]}</td>
             ))}
@@ -71,6 +73,7 @@ export function LandingPage() {
       <p>This analysis site is open source under AGPL-3.0. Initially built by Jake Coppinger
         in a volunteer capacity. <a href="https://github.com/jakecoppinger/rciti-walking-cycling-counts/">Contributions on Github are very welcome!</a>
       </p>
+      <p>Data last manually updated 2025-05-21.</p>
       <p>Download the raw CSV data here:</p>
       <p>
         <ul>

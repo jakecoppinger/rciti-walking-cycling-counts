@@ -18,6 +18,8 @@
     "@types/react-router-hash-link": "^2.4.6",
     "buffer": "^6.0.3",
     "csv-parser": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
     "mapbox-gl": "^2.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -41,8 +43,9 @@
   "scripts": {
     "start": "cp tsconfigs/web.tsconfig.json tsconfig.json && react-scripts start",
     "build": "cp tsconfigs/web.tsconfig.json tsconfig.json && react-scripts build",
-    "test": "cp tsconfigs/web.tsconfig.json tsconfig.json && react-scripts test --watchAll=false",
-    "generate-data": "cp tsconfigs/node.tsconfig.json tsconfig.json && tsc && NODE_NO_WARNINGS=1 node --max_old_space_size=4096 --trace-warnings  --experimental-specifier-resolution=node ./dist/generate-static-json.js && cp ",
+    "test": "cp tsconfigs/node.tsconfig.json tsconfig.json && jest",
+    "build:utils": "cp tsconfigs/node.tsconfig.json tsconfig.json && tsc",
+    "generate-data": "npm run build:utils && NODE_NO_WARNINGS=1 node --max_old_space_size=4096 --trace-warnings  --experimental-specifier-resolution=node ./dist/generate-static-json.js",
     "deploy": "npm run build && npx wrangler pages deploy ./build/"
   },
   "eslintConfig": {
@@ -67,6 +70,22 @@
   "homepage": "",
   "devDependencies": {
     "@types/xml2js": "^0.4.12",
+    "ts-jest": "^29.3.4",
     "wrangler": "^3.28.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "dist"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
   }
 }

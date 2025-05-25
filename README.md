@@ -33,9 +33,9 @@ npm run start
 - Select `Table` (not `Chart` - you can download from the Chart view but <=1hr frequency fails due
   to too much data)
 - Select `Apply`
-- Select `Download` to CSV
-- Select comma separated delimeter
-- Download to `public/data/...` and adjust filename
+- Select `Download`, and select CSV format
+- Select comma separated delimeter (default)
+- Download to `./public/data/...` and adjust filename
 - Repeat for all three files (15 min, hour, day)
 - Run `generate-data` script as per above
 - Commit the results & updated CSV.
@@ -63,7 +63,7 @@ coordinates too
 
 - Head to https://www.eco-visio.net/v5/login and login
 - Select `Sites` in sidebar
-- Choose the new site (that likely caused a type error on JSON generation as mentioned above)
+- Click on the new site (that likely caused a type error on JSON generation as mentioned above)
 - Select `Location` in sidebar
 - Add these values into `counterLocationCoordinates` in `src/types.ts`
 
